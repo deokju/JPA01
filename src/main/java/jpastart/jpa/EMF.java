@@ -16,6 +16,6 @@ public class EMF {
     }
 
     public static void close() {
-        emf.close(); 
+        emf.close();       
     }
 }
