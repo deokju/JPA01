@@ -1,22 +1,24 @@
-package jpastart.main;
-
+package jpastart.reserve.application;
 
 import jpastart.jpa.EMF;
-import jpastart.reserve.application.UserNotFoundException;
 import jpastart.reserve.model.User;
 
 import javax.persistence.EntityManager;
 
-public class ChangeNameService {
-    public void changeName( String email, String newName ) {
+public class WithdrawService {
+    public void withdraw( String email ) {
         EntityManager em = EMF.createEntityManager();
+        em.getTransaction().begin();
         try{
-            em.getTransaction().begin();
             User user = em.find(User.class, email);
-            if(user == null) throw new UserNotFoundException();
-            user.changeName(newName);
+            if(user == null){
+                throw new UserNotFoundException();
+            }
+
+            em.remove(user);
             em.getTransaction().commit();
-        }catch( Exception ex ) {
+
+        }catch(Exception ex) {
             em.getTransaction().rollback();
             throw ex;
         }finally {
