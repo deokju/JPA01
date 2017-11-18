@@ -24,4 +24,19 @@ public class User {
     }
 
 
+    public String getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void changeName(String newName) {
+        this.name = newName;
+    }
 }

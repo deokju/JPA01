@@ -9,7 +9,7 @@
         <properties>
             <property name="javax.persistence.jdbc.driver"      value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url"         value="jdbc:mysql://localhost/jpastart?characterEncoding=utf8" />
-            <property name="javax.persistence.jdbc.user"        value="jpauser" />
+            <property name="javax.persistence.jdbc.user"        value="darkduk" />
             <property name="javax.persistence.jdbc.password"    value="1111" />
 
             <property name="hibernate.show_sql" value="true" />
