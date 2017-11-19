@@ -11,6 +11,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @Column(name = "hotel_id")
     private String hotelId;
     private int rate;

@@ -14,7 +14,7 @@ public class HotelReviewMain {
 
         try{
             transaction.begin();
-            Review review = new Review("KR-S-01", 5, "최고에요");
+            Review review = new Review("KR-S-02", 5, "최고에요");
             entityManager.persist(review);
 
             Long id = review.getId();
